@@ -1,0 +1,65 @@
+<html>
+<h2>FORM REGISTRASI</h2>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+	
+	<style>
+		body {
+			 font-family: monaco;
+		}
+		
+		.button {
+			background-color: #6666ff;
+			border: none;
+			color: white;
+			padding: 15px 15px;
+		}
+		
+		#regForm {
+			padding: 10px;
+			widht: 390px;
+		}
+		
+		#regForm label {
+			text-align: right;
+			padding-right: 10px;
+			width: 80px;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		
+		#regForm input[type="text"], #regForm textarea {
+			width: 300px;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var tgllahir = document.getElementById("tgllahir").value;
+		if (nama != "" && tgllahir!="") {
+			return true;
+		}else{
+			alert('ISI DATA DENGAN LENGKAP');
+		}
+	}
+</script>
+<body>
+    <div id="regForm">
+        <form action="#" method="post" onSubmit="validasi()">
+            <label>Nama:</label>
+            <input type="text" id="nama"/>
+            <br>
+
+            <label>Jenis Kelamin:</label>
+                <input type="radio" name="jk" value="L"/>Laki-laki
+				<input type="radio" name="jk" value="P"/>Perempuan
+			<br>
+            <label>Tgl Lahir:</label><input type="text" id= "tgllahir"name="tgllahir"/><br>
+            <label>Alamat:</label><textarea name="alamat"></textarea> 
+            <br>
+            <input class = "button" type="submit">
+        </form>
+    </div>
+</body>
+</html>
